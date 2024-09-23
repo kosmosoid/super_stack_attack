@@ -31,17 +31,36 @@
         }
         #gameContainer {
             position: relative;
+            width: 640px;
+            height: 480px;
         }
         canvas {
             border: 1px solid black;
             background-size: cover;
             background-position: center;
+            display: none;
+        }
+        #gameInfo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            display: block;
+        }
+        #gameInfo h3 {
+            text-align: center;
         }
         #startButton {
             position: absolute;
-            top: 50%;
+            bottom: 20px;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             font-size: 24px;
             padding: 10px 20px;
         }
@@ -64,7 +83,24 @@
 <main>
     <div id="gameContainer">
         <canvas id="gameCanvas"></canvas>
-        <button id="startButton">Начать игру</button>
+        <div id="gameInfo">
+            <h4>Описание игры:</h4>
+            <p>Super Stack Attack - это увлекательная игра, в которой вы управляете персонажем, уклоняющимся от падающих ящиков и собирающим бонусы. Ваша цель - собирать ящики в линии, продержаться как можно дольше и набрать максимальное количество очков.</p>
+            <h4>Инструкция:</h4>
+            <ul>
+                <li>Стрелки влево и вправо или "A" и "D" для перемещения персонажа.</li>
+                <li>Нажмите пробел/W/стрелку вверх для прыжка.</li>
+                <li>Собирайте зеленые сердца для получения дополнительных жизней.</li>
+                <li>Собирайте желтые шарики для получения возможности стрелять.</li>
+                <li>Нажмите "<" для стрельбы влево и ">" для стрельбы вправо.</li>
+                <li>Собирайте ряды из трех и более одинаковых ящиков.</li>
+                <li>Собирайте целые ряды из разных ящиков.</li>
+                <li>Нажмите "H" для паузы/возобновления игры.</li>
+                <li>Нажмите "M" для включения/выключения звука.</li>
+            </ul>
+            <p>Удачи и веселой игры!</p>
+        </div>
+        <button id="startButton">Start game</button>
     </div>
 </main>
 
@@ -72,7 +108,8 @@
     <p>Contact me <a href="mailto:kosmosoid88@gmail.com">kosmosoid88@gmail.com</a> or donate me at <a href="https://boosty.to/kosmosoid">boosty.to</a></p>
 </footer>
 
-<script src="stkatk.js"></script>
+<script src="js/bundle.js"></script>
+
 
 </body>
 </html>
