@@ -2,78 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Attack</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        h1 {
-            margin: 0;
-        }
-        main {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #gameContainer {
-            position: relative;
-            width: 640px;
-            height: 480px;
-        }
-        canvas {
-            border: 1px solid black;
-            background-size: cover;
-            background-position: center;
-            display: none;
-        }
-        #gameInfo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
-            display: block;
-        }
-        #gameInfo h3 {
-            text-align: center;
-        }
-        #startButton {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
-            padding: 10px 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        footer a {
-            color: #9cf;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Super Stack Attack</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/mobile.css"/>
 </head>
 <body>
 <header>
@@ -83,33 +17,16 @@
 <main>
     <div id="gameContainer">
         <canvas id="gameCanvas"></canvas>
-        <div id="gameInfo">
-            <h4>Описание игры:</h4>
-            <p>Super Stack Attack - это увлекательная игра, в которой вы управляете персонажем, уклоняющимся от падающих ящиков и собирающим бонусы. Ваша цель - собирать ящики в линии, продержаться как можно дольше и набрать максимальное количество очков.</p>
-            <h4>Инструкция:</h4>
-            <ul>
-                <li>Стрелки влево и вправо или "A" и "D" для перемещения персонажа.</li>
-                <li>Нажмите пробел/W/стрелку вверх для прыжка.</li>
-                <li>Собирайте зеленые сердца для получения дополнительных жизней.</li>
-                <li>Собирайте желтые шарики для получения возможности стрелять.</li>
-                <li>Нажмите "<" для стрельбы влево и ">" для стрельбы вправо.</li>
-                <li>Собирайте ряды из трех и более одинаковых ящиков.</li>
-                <li>Собирайте целые ряды из разных ящиков.</li>
-                <li>Нажмите "H" для паузы/возобновления игры.</li>
-                <li>Нажмите "M" для включения/выключения звука.</li>
-            </ul>
-            <p>Удачи и веселой игры!</p>
-        </div>
+        <div id="gameInfo"></div>
         <button id="startButton">Start game</button>
     </div>
 </main>
 
 <footer>
-    <p>Contact me <a href="mailto:kosmosoid88@gmail.com">kosmosoid88@gmail.com</a> or donate me at <a href="https://boosty.to/kosmosoid">boosty.to</a></p>
+    <div id="contacts"></div>
 </footer>
 
 <script src="js/bundle.js"></script>
-
 
 </body>
 </html>
